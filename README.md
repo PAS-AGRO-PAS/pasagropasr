@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pasagropasr: Datasets from the PAS-AGRO-PAS Project <a href='https://github.com/PAS-AGRO-PAS/pasagropasr/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+# Data Sets of the PAS-AGRO-PAS Project <a href='https://github.com/PAS-AGRO-PAS/pasagropasr/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 ## Overview
 
@@ -27,8 +27,6 @@ install.packages("devtools")
 # Install the latest development version from GitHub
 devtools::install_github("PAS-AGRO-PAS/pasagropasr")
 ```
-
-------------------------------------------------------------------------
 
 ### Dataset Descriptions
 
