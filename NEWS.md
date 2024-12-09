@@ -6,18 +6,6 @@
 This document provides a history of changes, updates, and improvements
 made to the `pasagropasr` package.
 
-## Version 1.0.0 (2024-04-10)
-
-## First Stable Release
-
-- Official release of the `pasagropasr` package.
-- Provides access to the `lambBreeds` dataset, containing lamb carcass
-  measurements and tissue composition categorized by breed.
-- Includes basic functionality for dataset exploration and
-  visualization.
-- Added a vignette to demonstrate usage and data analysis examples.
-- Licensed under GPL (\>= 3).
-
 ## Version 0.1.0 (Initial Development Version)
 
 ### Concept and Development
@@ -29,7 +17,7 @@ made to the `pasagropasr` package.
 - Laid groundwork for future dataset additions and enhancements.
 - Basic README and documentation created.
 
-## Stay tuned for upcoming updates and new features in future releases!
+### Stay tuned for upcoming updates and new features in future releases!
 
 - For the latest development version, visit the GitHub repository:
   <https://github.com/PAS-AGRO-PAS/pasagropasr/>

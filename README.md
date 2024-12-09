@@ -28,8 +28,6 @@ install.packages("devtools")
 devtools::install_github("PAS-AGRO-PAS/pasagropasr")
 ```
 
-------------------------------------------------------------------------
-
 ### Dataset Descriptions
 
 The package currently includes the following dataset:
