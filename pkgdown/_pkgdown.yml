@@ -1,0 +1,25 @@
+url: https://github.com/PAS-AGRO-PAS/pasagropasr/
+
+home:
+  title: PAS-AGRO-PAS
+
+authors:
+  Vasco Cadavez:
+    href: https://ipb.pt/vcadavez
+  Ursula Gonzales-Barron:
+    href: https://ipb.pt/~ubarron/
+
+template:
+  bootstrap: 5
+  bootswatch: minty
+
+reference:
+- title: Lambs data
+  desc: Data from experimental trials with lambs
+  contents:
+  - lambBreeds
+
+news:
+  releases:
+  - text: "Version 0.1.0"
+    href: https://github.com/PAS-AGRO-PAS/pasagropasr/

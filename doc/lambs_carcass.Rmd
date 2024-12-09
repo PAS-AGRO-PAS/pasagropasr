@@ -1,0 +1,69 @@
+---
+title: Lambs growth
+author:
+   - Vasco Cadavez
+   - Ursula Gonzales Barron
+date: 2024/04/11
+output: 
+  rmarkdown::html_vignette:
+     number_sections: yes
+     toc: yes
+vignette: >
+  %\VignetteIndexEntry{Lambs growth }
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+  \usepackage{caption, amssymb, amsmath}
+bibliography: ../inst/REFERENCES.bib
+csl: ../inst/apa.csl
+---
+
+## Introduction
+
+In this tutorial we will explain how to fit primary growth models to experimental data. For this lab, we will use the `predmicror` R package developed to accommodate all the functions we are being using in predictive microbiology workshops. The `predmicror` package is outside the base R functions, and the first step is load the `predmicror`, package with the principal predictive microbial growth models, and `gslnls` which is a package to fit non-linear models using non-linear least squares.
+
+
+
+```{r}
+library(pasagropasr)
+library(ggplot2)
+```
+
+## Loading data
+
+To conduct statistical analyses, we need to import data into R working environment. The `predmicror` package has incorporated datasets, and we can use the `data()` function to load the example datasets to the working environment. Thus, we will start by fitting a full growth model to experimental data, thus we load the `lambs.rda` dataset which is part of the `predmicror` package.
+
+```{r}
+data(lambs)
+```
+
+Now the dataset is available in the `R` environment, and we can print the entire `dataset` by typing `growthfull` or take a look to the first five lines by using the `head()`.
+
+```{r}
+lambs
+head(lambs)
+```
+
+For data outer to `predmicror`package, usually in .csv format, which are flat text files we use the `read.csv()` function to import the CSV file into R environment. Before load a dataset, its good practice to assure that the dataset is located in the working directory, thus to import a CSV file called `growthfull.csv` into the R environment we do it with the next code section.
+
+```{r, eval=FALSE}
+lambs <- read.csv("../inst/extdata/lambs.csv", sep = ",", header = TRUE)
+```
+
+We have the dataset in the R environment, thus we can start checking the data proprieties. For example, the `str()` function gives information considering the structure of the variables (numeric, integer, etc.), and the `names()` function show us the variables names.
+
+```{r}
+str(lambs)
+names(lambs)
+```
+
+## Plotting data
+
+To check the relationship between `Time` and `lnN`, we might use the function `plot()`, and we can check the data by visual inspection.
+
+```{r}
+plot(kkcf ~ PCQ,
+  data = lambs,
+  xlab = "cm", ylab = "cm"
+)
+```
+

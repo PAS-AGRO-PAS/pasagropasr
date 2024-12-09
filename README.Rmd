@@ -1,0 +1,95 @@
+---
+output: github_document
+---
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/",
+  out.width="100%"
+)
+```
+
+# pasagropasr <a href='https://github.com/PAS-AGRO-PAS/pasagropasr/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+
+<!-- badges: start -->
+
+<!-- [![R build -->
+<!-- status](https://github.com/vcadavez/pasagropasr/workflows/R-CMD-check/badge.svg)](https://github.com/abjur/abjData/actions) -->
+<!-- [![CRAN -->
+<!-- status](https://www.r-pkg.org/badges/version/abjData/)](https://CRAN.R-project.org/package=abjData) -->
+<!-- badges: end -->
+
+## Overview
+
+This package contains a set of databases obtained unde the reseach activities of the PAS-AGRO-PAS project.
+
+The data included comes from the research work develop by all the PAS-AGRO-PAs partners [PAS-AGRO-PAs partners](https://www.ipb.pt/pas-agro-pas/).
+
+The aim of the package is to make databases available for the research community as a resource for young research training.
+
+## Installation
+
+```{r}
+install.packages("pasagropasr")
+## dev version
+# remotes::install_github("PAS-AGRO-PAS/pasagropasr")
+```
+
+## Datasets description
+
+| Dataset       | Description                                                         |
+|---------------|---------------------------------------------------------------------|
+| `lambBreeds`  | Lamb carcasses measurements and tissues composition.                |
+
+
+## How to use
+
+1. Intall the `pasagropas` package
+2. Load the package (`library(pasagropasr)`) like any other R package
+3. Load the dataset (`data(lambBreeds)`) you want to use.
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(pasagropasr)
+library(readxl)
+data(lambBreeds)
+```
+
+```{r}
+str(lambBreeds)
+```
+
+### Plot examples
+
+Box-plot of carcass muscle content (%) by breed:
+
+```{r}
+lambBreeds |>
+  ggplot() +
+  geom_boxplot(
+    aes(MUS, Breed), 
+    colour = "#102C68", 
+    fill = "#7AD151"
+  ) +
+  theme(legend.position = "none") +
+  theme_bw(12) +
+  labs(
+    x = "Muscle content (%)", 
+    y = "Breed"
+  )
+```
+
+![](man/figures/README-fig-idhm-1.png)<!-- -->
+
+
+## Requirements
+
+`pasagropasr` requires R version greater than or equal to 3.5.
+
+## License
+
+`pasagropasr` is licensed under the [GNU General Public License](https://github.com/PAS-AGRO-PAS/pasagropasr/blob/main/LICENSE).

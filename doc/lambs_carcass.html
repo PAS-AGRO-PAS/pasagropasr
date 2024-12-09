@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="Vasco Cadavez" />
+<meta name="author" content="Ursula Gonzales Barron" />
+
+
+<title>Lambs growth</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Lambs growth</h1>
+<h4 class="author">Vasco Cadavez</h4>
+<h4 class="author">Ursula Gonzales Barron</h4>
+<h4 class="date">2024/04/11</h4>
+
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction" id="toc-introduction"><span class="toc-section-number">0.1</span> Introduction</a></li>
+<li><a href="#loading-data" id="toc-loading-data"><span class="toc-section-number">0.2</span> Loading data</a></li>
+<li><a href="#plotting-data" id="toc-plotting-data"><span class="toc-section-number">0.3</span> Plotting data</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level2" number="0.1">
+<h2><span class="header-section-number">0.1</span> Introduction</h2>
+<p>In this tutorial we will explain how to fit primary growth models to
+experimental data. For this lab, we will use the <code>predmicror</code>
+R package developed to accommodate all the functions we are being using
+in predictive microbiology workshops. The <code>predmicror</code>
+package is outside the base R functions, and the first step is load the
+<code>predmicror</code>, package with the principal predictive microbial
+growth models, and <code>gslnls</code> which is a package to fit
+non-linear models using non-linear least squares.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(pasagropasr)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+</div>
+<div id="loading-data" class="section level2" number="0.2">
+<h2><span class="header-section-number">0.2</span> Loading data</h2>
+<p>To conduct statistical analyses, we need to import data into R
+working environment. The <code>predmicror</code> package has
+incorporated datasets, and we can use the <code>data()</code> function
+to load the example datasets to the working environment. Thus, we will
+start by fitting a full growth model to experimental data, thus we load
+the <code>lambs.rda</code> dataset which is part of the
+<code>predmicror</code> package.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">data</span>(lambs)</span></code></pre></div>
+<p>Now the dataset is available in the <code>R</code> environment, and
+we can print the entire <code>dataset</code> by typing
+<code>growthfull</code> or take a look to the first five lines by using
+the <code>head()</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>lambs</span></code></pre></div>
+<pre><code>##    animal breed    PCQ   C12    E2 kkcf      mu     gs     gi      os    res
+## 1   98130   cgb  8.994 1.300 15.80   64 2468.31 237.60 396.25  871.37 180.14
+## 2    9853   cgb  9.059 2.500 18.50   77 2463.26 347.45 404.67  792.79 130.72
+## 3   98137   cgb  9.874 0.800 14.20   33 2762.72 227.72 385.62 1002.65 177.78
+## 4    9902   cgb  9.982 1.500 17.30   54 2849.50 210.16 270.73 1021.46 176.85
+## 5    9954   cgb 10.040 1.000 14.50   54 2603.99 212.54 427.64  895.71 285.88
+## 6    9905   cgb 10.200 1.450 16.80   85 2800.98 313.56 396.98  913.84 248.88
+## 7    9945   cgb 10.434 0.500 15.80   59 2687.86 202.83 427.60  904.07 187.72
+## 8   98140   cgb 10.780 1.600 18.00  108 2889.72 357.81 516.45  915.51 174.94
+## 9   98175   cgb 11.000 1.900 15.00   44 3121.94 164.37 333.54  967.76 179.34
+## 10   9916   cgb 12.150 1.200 17.45  101 3338.39 313.10 567.79 1203.12 192.80
+## 11   9983   cgb 12.171 1.100 17.00  116 3322.49 395.93 650.51 1056.10 191.69
+## 12   9981   cgb 12.725 2.200 16.20   99 3651.08 303.36 582.50 1122.68 288.50
+## 13   9931   cgb 12.920 1.000 19.06   91 3776.92 342.34 524.72 1093.27 194.15
+## 14  98138   cgb 13.088 2.030 22.10   88 3695.19 405.92 539.62 1239.56 245.80
+## 15   9913   cgb 13.200 1.400 19.00  119 3600.98 393.72 569.29 1300.18 201.47
+## 16  98200   cgb 13.420 2.500 18.35  122 3592.41 480.41 655.78 1181.58 192.30
+## 17   9926   cgb 13.770 1.700 21.50  125 3764.01 466.50 705.32 1179.32 222.82
+## 18   9819   cgb 13.856 2.100 21.70  133 3731.24 507.53 555.83 1161.89 199.00
+## 19  98151   cgb 14.192 1.400 17.10  111 4053.01 362.41 499.49 1418.38 285.99
+## 20   9810   cgb 14.484 2.300 24.30  138 3885.35 474.10 716.96 1070.30 287.89
+## 21   9979   cgb 14.810 1.000 17.70   59 4491.98 200.08 477.10 1477.68 256.60
+## 22   9982   cgb 14.898 1.500 23.90  153 4470.53 466.27 829.54 1266.85 233.62
+## 23  99922  sflk  8.044 0.400  7.80   19 2387.73  53.14 225.15  767.64 152.22
+## 24  99929  sflk  9.020 0.400  8.00   15 2609.06  68.61 139.39  922.47 150.00
+## 25  98927  sflk 10.091 1.200 14.30   37 2741.79 182.41 507.72 1016.68 181.15
+## 26  98925  sflk 10.101 0.950 12.10   40 3022.18 133.27 259.11  933.08 163.72
+## 27  98916  sflk 10.377 1.995 14.90   34 3091.84 144.78 374.96  860.74 121.25
+## 28    917  sflk 11.087 0.800 16.90   71 3225.49 191.84 434.85 1015.59 162.98
+## 29  99908  sflk 12.133 1.000 14.00   78 3369.54 166.23 450.81 1077.14 210.05
+## 30  98914  sflk 12.712 1.700 13.10   61 3570.45 249.47 564.79 1119.11 140.62
+## 31  98901  sflk 12.716 1.800 12.50   46 3753.36 188.86 437.36 1137.21 179.51
+## 32    913  sflk 13.018 1.000 14.00   42 3948.87 204.71 465.96 1100.64 243.26
+## 33  99909  sflk 13.024 1.000 14.75   95 3528.76 231.64 579.98 1052.52 199.87
+## 34  99924  sflk 13.297 2.000 17.35   73 3608.90 341.01 715.25 1090.09 186.74
+## 35  99916  sflk 13.702 0.550 15.00  102 3911.18 213.12 619.18 1103.03 202.28
+## 36    921  sflk 13.766 0.500 16.30   48 4088.70 187.85 574.72 1247.11 244.46
+## 37    952  sflk 14.391 0.350 17.80  108 4078.67 257.46 667.94 1258.08 314.03
+## 38  99920  sflk 14.788 1.000 14.40   55 4155.69 305.31 709.09 1236.20 278.45
+## 39    925  sflk 14.857 1.000 17.00   89 4049.62 370.64 880.66 1216.79 220.28
+## 40  99910  sflk 14.966 1.400 15.00   68 4132.00 230.19 619.22 1308.84 256.91</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">head</span>(lambs)</span></code></pre></div>
+<pre><code>##   animal breed    PCQ  C12   E2 kkcf      mu     gs     gi      os    res
+## 1  98130   cgb  8.994 1.30 15.8   64 2468.31 237.60 396.25  871.37 180.14
+## 2   9853   cgb  9.059 2.50 18.5   77 2463.26 347.45 404.67  792.79 130.72
+## 3  98137   cgb  9.874 0.80 14.2   33 2762.72 227.72 385.62 1002.65 177.78
+## 4   9902   cgb  9.982 1.50 17.3   54 2849.50 210.16 270.73 1021.46 176.85
+## 5   9954   cgb 10.040 1.00 14.5   54 2603.99 212.54 427.64  895.71 285.88
+## 6   9905   cgb 10.200 1.45 16.8   85 2800.98 313.56 396.98  913.84 248.88</code></pre>
+<p>For data outer to <code>predmicror</code>package, usually in .csv
+format, which are flat text files we use the <code>read.csv()</code>
+function to import the CSV file into R environment. Before load a
+dataset, its good practice to assure that the dataset is located in the
+working directory, thus to import a CSV file called
+<code>growthfull.csv</code> into the R environment we do it with the
+next code section.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>lambs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../inst/extdata/lambs.csv&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>We have the dataset in the R environment, thus we can start checking
+the data proprieties. For example, the <code>str()</code> function gives
+information considering the structure of the variables (numeric,
+integer, etc.), and the <code>names()</code> function show us the
+variables names.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">str</span>(lambs)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    40 obs. of  11 variables:
+##  $ animal: int  98130 9853 98137 9902 9954 9905 9945 98140 98175 9916 ...
+##  $ breed : chr  &quot;cgb&quot; &quot;cgb&quot; &quot;cgb&quot; &quot;cgb&quot; ...
+##  $ PCQ   : num  8.99 9.06 9.87 9.98 10.04 ...
+##  $ C12   : num  1.3 2.5 0.8 1.5 1 1.45 0.5 1.6 1.9 1.2 ...
+##  $ E2    : num  15.8 18.5 14.2 17.3 14.5 ...
+##  $ kkcf  : int  64 77 33 54 54 85 59 108 44 101 ...
+##  $ mu    : num  2468 2463 2763 2850 2604 ...
+##  $ gs    : num  238 347 228 210 213 ...
+##  $ gi    : num  396 405 386 271 428 ...
+##  $ os    : num  871 793 1003 1021 896 ...
+##  $ res   : num  180 131 178 177 286 ...</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">names</span>(lambs)</span></code></pre></div>
+<pre><code>##  [1] &quot;animal&quot; &quot;breed&quot;  &quot;PCQ&quot;    &quot;C12&quot;    &quot;E2&quot;     &quot;kkcf&quot;   &quot;mu&quot;     &quot;gs&quot;    
+##  [9] &quot;gi&quot;     &quot;os&quot;     &quot;res&quot;</code></pre>
+</div>
+<div id="plotting-data" class="section level2" number="0.3">
+<h2><span class="header-section-number">0.3</span> Plotting data</h2>
+<p>To check the relationship between <code>Time</code> and
+<code>lnN</code>, we might use the function <code>plot()</code>, and we
+can check the data by visual inspection.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">plot</span>(kkcf <span class="sc">~</span> PCQ,</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>  <span class="at">data =</span> lambs,</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">&quot;cm&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;cm&quot;</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

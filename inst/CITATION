@@ -1,0 +1,9 @@
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+bibentry(bibtype = "Manual",
+title = "pasagropasr: Data sets from PAS-AGRO-PAS Project",
+author = c(person("Vasco", "Cadavez"),
+           person("Ursula", "Gonzales-Barron")),
+           year = year,
+           note = note,
+           url = "https://github.com/PAS-AGRO-PAS/pasagropasr/")

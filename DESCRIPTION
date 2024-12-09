@@ -1,0 +1,33 @@
+Package: pasagropasr
+Title: pasagropasr: Data sets of PAS-AGRO-PAS Project
+Version: 1.0.0
+Date: 2024-04-10
+Authors@R: c(
+             person("Vasco", "Cadavez", role = c("aut", "cre"),
+                    email="vcadavez@ipb.pt", comment = c(ORCID = "0000-0002-3077-7414")),
+             person("Ursula","Gonzales-Barron", role = "aut", 
+                    email = "ubarron@ipb.pt", comment = c(ORCID = "0000-0002-8462-9775"))
+                    )
+Description: Contains the reaserach data from PAS-AGRO-PAS project.
+URL: https://github.com/PAS-AGRO-PAS/pasagropasr
+BugReports: https://github.com/PAS-AGRO-PAS/pasagropasr/issues
+Depends: R (>= 3.4.0)
+Imports: Rdpack, readxl
+RdMacros: Rdpack
+LazyLoad: yes
+LazyData: true
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+NeedsCompilation: no
+Suggests: 
+    knitr,
+    rmarkdown,
+    htmltools,
+    testthat (>= 3.0.0),
+    ggplot2
+VignetteBuilder: knitr
+Maintainer: Vasco Cadavez <vcadavez@ipb.pt>
+Packaged: 20224-04-11 10:00:43 UTC; vc
+Config/testthat/edition: 3
