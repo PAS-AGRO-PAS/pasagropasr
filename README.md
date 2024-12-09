@@ -1,73 +1,64 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pasagropasr <a href='https://github.com/PAS-AGRO-PAS/pasagropasr/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
-
-<!-- badges: start -->
-<!-- [![R build -->
-<!-- status](https://github.com/vcadavez/pasagropasr/workflows/R-CMD-check/badge.svg)](https://github.com/abjur/abjData/actions) -->
-<!-- [![CRAN -->
-<!-- status](https://www.r-pkg.org/badges/version/abjData/)](https://CRAN.R-project.org/package=abjData) -->
-<!-- badges: end -->
+# pasagropasr: Datasets from the PAS-AGRO-PAS Project <a href='https://github.com/PAS-AGRO-PAS/pasagropasr/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 ## Overview
 
-This package contains a set of databases obtained unde the reseach
-activities of the PAS-AGRO-PAS project.
-
-The data included comes from the research work develop by all the
-PAS-AGRO-PAs partners [PAS-AGRO-PAs
+The `pasagropasr` package provides a collection of datasets generated
+through the research activities of the PAS-AGRO-PAS project. These
+datasets are the result of collaborative work by all [PAS-AGRO-PAS
 partners](https://www.ipb.pt/pas-agro-pas/).
 
-The aim of the package is to make databases available for the research
-community as a resource for young research training.
+The primary aim of this package is to make these datasets accessible to
+the research community, serving as a valuable resource for training
+young researchers and supporting studies in agriculture and
+environmental sciences.
 
 ## Installation
 
+You can install the latest stable version of the package from CRAN (if
+available) or the development version from GitHub.
+
 ``` r
-install.packages("pasagropasr")
-#> Installing package into '/home/vcadavez/R/x86_64-pc-linux-gnu-library/4.3'
-#> (as 'lib' is unspecified)
-#> Warning: package 'pasagropasr' is not available for this version of R
-#> 
-#> A version of this package for your version of R might be available elsewhere,
-#> see the ideas at
-#> https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
-## dev version
-# remotes::install_github("PAS-AGRO-PAS/pasagropasr")
+# Install devtools package if not already installed
+install.packages("devtools")
+
+# Install the latest development version from GitHub
+devtools::install_github("PAS-AGRO-PAS/pasagropasr")
 ```
 
-## Datasets description
+------------------------------------------------------------------------
 
-| Dataset      | Description                                          |
-|--------------|------------------------------------------------------|
-| `lambBreeds` | Lamb carcasses measurements and tissues composition. |
+### Dataset Descriptions
 
-## How to use
+The package currently includes the following dataset:
 
-1.  Intall the `pasagropas` package
-2.  Load the package (`library(pasagropasr)`) like any other R package
-3.  Load the dataset (`data(lambBreeds)`) you want to use.
+| Dataset | Description |
+|----|----|
+| `lambBreeds` | Data on lamb carcass measurements and tissue composition, categorized by breed. |
+
+Additional datasets may be added in future versions to enhance the
+package’s utility for agricultural and environmental research.
+
+## How to Use
+
+Follow these steps to get started with the `pasagropasr` package:
+
+1.  Install the package using CRAN or GitHub.
+2.  Load the package using `library(pasagropasr)`.
+3.  Load a dataset using the `data()` function.
+
+Here is an example:
 
 ``` r
-library(readxl)
-library(tidyverse)
-#> ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-#> ✔ dplyr     1.1.4     ✔ readr     2.1.5
-#> ✔ forcats   1.0.0     ✔ stringr   1.5.1
-#> ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-#> ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-#> ✔ purrr     1.0.2     
-#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-#> ✖ dplyr::filter() masks stats::filter()
-#> ✖ dplyr::lag()    masks stats::lag()
-#> ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+# Load the package
 library(pasagropasr)
-library(readxl)
-data(lambBreeds)
-```
 
-``` r
+# Load the dataset
+data(lambBreeds)
+
+# Explore the structure of the dataset
 str(lambBreeds)
 #> 'data.frame':    40 obs. of  25 variables:
 #>  $ Lamb : num  9810 9819 9853 9902 9905 ...
@@ -97,35 +88,45 @@ str(lambBreeds)
 #>  $ KKCF : num  2.1 2.11 1.83 1.18 1.79 1.92 1.77 1.93 1.51 1.32 ...
 ```
 
-### Plot examples
+------------------------------------------------------------------------
 
-Box-plot of carcass muscle content (%) by breed:
+### Plot Example
+
+Here is an example of a box plot showing the muscle content percentage
+by breed in the `lambBreeds` dataset:
 
 ``` r
+library(ggplot2)
+
 lambBreeds |>
   ggplot() +
   geom_boxplot(
-    aes(MUS, Breed), 
+    aes(x = MUS, y = Breed), 
     colour = "#102C68", 
     fill = "#7AD151"
   ) +
-  theme(legend.position = "none") +
-  theme_bw(12) +
+  theme_bw() +
   labs(
     x = "Muscle content (%)", 
     y = "Breed"
   )
 ```
 
-<img src="man/figures/unnamed-chunk-5-1.png" width="100%" />
-
-![](man/figures/README-fig-idhm-1.png)<!-- -->
+<img src="man/figures/unnamed-chunk-4-1.png" width="100%" />
 
 ## Requirements
 
-`pasagropasr` requires R version greater than or equal to 3.5.
+`pasagropasr` requires R version 3.5 or higher. Additional suggested
+packages for extended functionality include:
+
+- `ggplot2` for visualization.
+- `readxl` for reading Excel files.
+- `tidyverse` for data manipulation and visualization workflows.
 
 ## License
 
-`pasagropasr` is licensed under the [GNU General Public
-License](https://github.com/PAS-AGRO-PAS/pasagropasr/blob/main/LICENSE).
+This package is licensed under the [GNU General Public License
+(GPL-3)](https://github.com/PAS-AGRO-PAS/pasagropasr/blob/main/LICENSE).
+This means you are free to use, modify, and distribute the software,
+provided that any derivative works also remain open source under the
+same license.
