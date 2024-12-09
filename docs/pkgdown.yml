@@ -3,7 +3,11 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   lambs_carcass: lambs_carcass.html
+<<<<<<< HEAD
 last_built: 2024-12-09T14:36Z
+=======
+last_built: 2024-12-09T14:26Z
+>>>>>>> 8c0f316a0bb0a9edf1083578a7d4b178d9290846
 urls:
   reference: https://github.com/PAS-AGRO-PAS/pasagropasr/reference
   article: https://github.com/PAS-AGRO-PAS/pasagropasr/articles
